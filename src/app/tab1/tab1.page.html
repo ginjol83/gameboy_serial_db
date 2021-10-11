@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Gameboy Plate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gameboy Plate</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Gameboy Plate page"></app-explore-container>
+  <div class = "list">
+    <label class = "item item-input">
+       <input type = "text" placeholder = "Insert Gameboy Plate" (ionChange)="plateCapture( $event )" />
+    </label>
+    <p><ion-button color="success" >Find</ion-button></p>
+  </div>
+</ion-content>

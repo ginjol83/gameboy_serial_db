@@ -1,0 +1,7 @@
+{
+  "name": "gameboy_plate",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
