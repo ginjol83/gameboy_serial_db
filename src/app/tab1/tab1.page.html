@@ -15,9 +15,34 @@
 
   <app-explore-container name="Gameboy Plate page"></app-explore-container>
   <div class = "list">
-    <label class = "item item-input">
-       <input type = "text" placeholder = "Insert Gameboy Plate" (ionChange)="plateCapture( $event )" />
-    </label>
-    <p><ion-button color="success" >Find</ion-button></p>
+    <ion-item>
+      <ion-label>Select Plate type</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]="plateType">
+        <ion-select-option value="G">G</ion-select-option>
+        <ion-select-option value="GH">GH</ion-select-option>
+        <ion-select-option value="GM">GM</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+    <ion-label class = "item item-input"></ion-label>
+       <ion-input type = "number" placeholder = "Insert Gameboy plate number" [(ngModel)]="plate" ></ion-input>
+    </ion-item>
+    <p><ion-button color="success" (click)="searchPlate()" >Find</ion-button></p>
   </div>
+  <div *ngIf="block">
+    <ion-card>
+      <!-- img src="./madison.jpg" / -->
+      <ion-card-header>
+        <ion-card-subtitle>{{serial}}</ion-card-subtitle>
+        <ion-card-title>{{cpu}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Made In: {{made_in}}</p>
+        <p>Year Product: {{age}}</p>
+        <p>Screws: {{screws}}</p>
+        <p>Comment: {{comment}}</p>                
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>

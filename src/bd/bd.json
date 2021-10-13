@@ -1,0 +1,8 @@
+[
+    {"serial_char":"G","serial_ini": "01000000", "serial_end": "01590000", "cpu": "DMG CPU-01", 
+        "comment": "The first GameBoys released in japan, had a different initial boot rom, from a serial G01000001 to aproximate G01143222", "made_in": "Japan", "screws": "Philips screws", "age": "1989"},
+    {"serial_char":"G","serial_ini": "01640000", "serial_end": "04470000", "cpu": "DMG CPU-02", 
+        "comment": "", "made_in": "Japan", "screws": "Philips screws", "age": "1989"},
+    {"serial_char":"G","serial_ini": "04810000", "serial_end": "07000000", "cpu": "DMG CPU-03", "comment": "", "made_in": "Japan", "screws": "Philips screws", "age": "1989"}
+
+]
