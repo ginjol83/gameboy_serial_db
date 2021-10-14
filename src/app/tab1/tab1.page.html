@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Gameboy Plate
+      Gameboy Serial
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,15 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Gameboy Plate</ion-title>
+      <ion-title size="large">Gameboy Serial</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Gameboy Plate page"></app-explore-container>
+  <app-explore-container name="Gameboy Serial page"></app-explore-container>
   <div class = "list">
     <ion-item>
-      <ion-label>Select Plate type</ion-label>
-      <ion-select placeholder="Select One" [(ngModel)]="plateType">
+      <ion-label>Select serial type</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]="serialType">
         <ion-select-option value="G">G</ion-select-option>
         <ion-select-option value="GH">GH</ion-select-option>
         <ion-select-option value="GM">GM</ion-select-option>
@@ -25,15 +25,15 @@
     </ion-item>
     <ion-item>
     <ion-label class = "item item-input"></ion-label>
-       <ion-input type = "number" placeholder = "Insert Gameboy plate number" [(ngModel)]="plate" ></ion-input>
+       <ion-input type = "number" placeholder = "Insert Gameboy serial number" [(ngModel)]="serialNum" (focusin)="onBlur()" ></ion-input>
     </ion-item>
-    <p><ion-button color="success" (click)="searchPlate()" >Find</ion-button></p>
+    <p><ion-button color="success" (click)="searchSerial()" >Search</ion-button></p>
   </div>
   <div *ngIf="block">
     <ion-card>
       <!-- img src="./madison.jpg" / -->
       <ion-card-header>
-        <ion-card-subtitle>{{serial}}</ion-card-subtitle>
+        <ion-card-subtitle>{{serialNum}}</ion-card-subtitle>
         <ion-card-title>{{cpu}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
