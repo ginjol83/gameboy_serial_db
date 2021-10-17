@@ -12,11 +12,17 @@ export class Tab1Page {
   serialType
   block  
   serialNum
-  cpu
+  mainboard
   comment
   made_in
   screws
   age
+  cpu 
+  vram 
+  wram 
+  lcd_board 
+  power_board 
+  jack_board 
   
   constructor() {
     this.block = false
@@ -38,22 +44,34 @@ export class Tab1Page {
 
       if(num > serial_ini && num < serial_end && serial_char == serialChars){
         this.serialNum = serialChars+num 
-        this.cpu = aux.cpu
+        this.mainboard = aux.mainboard
         this.comment = aux.comment
         this.made_in = aux.made_in
         this.screws = aux.screws
         this.age = aux.age
+        this.cpu = aux.cpu
+        this.vram = aux.vram
+        this.wram = aux.wram
+        this.lcd_board = aux.lcd_board
+        this.power_board = aux.power_board
+        this.jack_board = aux.jack_board
 
         this.block = true
       }
     }
     if(!this.block){
-      this.cpu="BAD serial number"
+      this.mainboard="BAD serial number"
       this.serialNum = "" 
       this.comment = ""
       this.made_in = ""
       this.screws = ""
       this.age = ""
+      this.cpu = ""
+      this.vram = ""
+      this.wram = ""
+      this.lcd_board = ""
+      this.power_board = ""
+      this.jack_board = ""
 
       this.block = true
     }
